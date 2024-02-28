@@ -28,7 +28,6 @@ jobs:
           remote_port: ${{ secrets.DEPLOY_PORT }}
           remote_user: ${{ secrets.DEPLOY_USER }}
           remote_key: ${{ secrets.DEPLOY_KEY }}
-          remote_key_pass: ${{ secrets.DEPLOY_KEY_PASS }}
 ```
 
 Create a new ssh key pair.
@@ -43,5 +42,5 @@ https://github.com/USER_NAME/REPO/settings/secrets/actions
 Add the public key to the server.
 
 ```bash
-rsync ~/.ssh/id_ed25519.pub USER@HOST:~/.ssh/  
+ssh-copy-id -i ~/.ssh/id_ed25519.pub USER@HOST
 ```
