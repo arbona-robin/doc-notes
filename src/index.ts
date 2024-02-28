@@ -141,7 +141,12 @@ async function generateSite(): Promise<void> {
     // Load the content
     const content = loadContent();
 
-    // Generate the site
+    // Create the site directory
+    if (!fs.existsSync("site")) {
+        fs.mkdirSync("site");
+    }
+
+    // Generate pages
     const pagesMetadata = generatePages({ template, content });
 
     // Generate the index page
