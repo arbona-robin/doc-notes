@@ -11,18 +11,29 @@ export function generateHomeHtml({ template, metadata, pagesMetadata }: { templa
             ${template.header.replace("{{title}}", metadata.title)}
             <body>
             ${template.main.replace("{{content}}", `
+            <input type="text" id="search" placeholder="Search">
             <ul>
-                ${Array.from(pagesMetadata).map(([key, value]) => {
-            return `
+                ${Array.from(pagesMetadata)
+                .sort((a, b) => a[1].date > b[1].date ? -1 : 1)
+                .map(([key, value]) => {
+                    return `
                     <li>
-                        <a href="${key}.html">${value.title}</a> ${value.description}
+                        <a 
+                            href="${key}.html"  
+                            search-data-tags="${value.tags.join(" ")}" 
+                            search-data-title="${value.title}"
+                            search-data-description="${value.description}"
+                            >${value.title}</a> - ${value.date} - ${value.description}
                     </li>
                 `;
-        }
-        ).join("")}
+                }
+                ).join("")}
             </ul>
             `)}
             ${template.footer}
+
+            <script src="search.js" defer></script>
+
         </body>
         </html>
     `;;
