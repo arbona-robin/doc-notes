@@ -16,6 +16,8 @@ jobs:
         run: npm install
       - name: build
         run: npm run build
+      - name: list files in site directory
+        run: ls -l site
       - name: rsync deployments
         uses: burnett01/rsync-deployments@6.0.0
         with:
