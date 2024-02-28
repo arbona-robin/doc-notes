@@ -1,3 +1,10 @@
+---
+title: GitHub Actions Deploy SSH Rsync
+description: Setup pipeline to deploy to a server using rsync over ssh
+date: 2024-02-28
+tags: github, actions, deploy, ssh, rsync
+---
+
 Create workflow file in `.github/workflows/deploy.yml`.
 
 https://github.com/marketplace/actions/rsync-deployments-action
