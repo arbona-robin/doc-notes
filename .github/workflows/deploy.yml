@@ -14,8 +14,8 @@ jobs:
           node-version: 20.6.0
       - name: install dependencies
         run: npm install
-      - name: build
-        run: npm run build
+      - name: build site
+        run: npm run generate
       - name: list files in site directory
         run: ls -l site
       - name: rsync deployments

@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
+    "generate": "node --env-file=.env -r ts-node/register src/index.ts",
     "dev": "node --env-file=.env --watch -r ts-node/register src/index.ts"
   },
   "keywords": [],
