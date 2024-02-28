@@ -1,11 +1,17 @@
+# Install dependencies
+
+```bash
+npm install
+```
+
 # Generate static site
 
 ```bash
-yarn build
+npm run build
 ```
 
 # Development
 
 ```bash
-yarn dev
+npm run dev
 ```
