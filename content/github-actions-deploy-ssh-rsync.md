@@ -44,3 +44,15 @@ Add the public key to the server.
 ```bash
 ssh-copy-id -i ~/.ssh/id_ed25519.pub USER@HOST
 ```
+
+
+Push the changes to the repository to trigger the deployment.
+
+```bash
+git add .
+git commit -m "Add deploy action"
+git push
+```
+
+Check deployment log at
+https://github.com/USER_NAME/REPO/actions
