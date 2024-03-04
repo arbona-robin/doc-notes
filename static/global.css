@@ -13,8 +13,8 @@ body {
 
 @media screen and (max-width: 600px) {
   header h1 {
-    line-height: 45px;
-    font-size: 50px;
+    line-height: 30px;
+    font-size: 35px;
   }
 }
 
@@ -89,7 +89,7 @@ input[type="text"] {
   border-radius: 0;
   padding: 0;
   margin: 1em 1em 1em 0;
-  width: 150px;
+  width: 70px;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #000000;
@@ -104,7 +104,7 @@ input[type="text"]::placeholder {
 
 input[type="text"]:focus {
   outline: none;
-  width: 100%;
+  width: 200px;
 }
 
 pre[class*="language-"] {
@@ -172,6 +172,12 @@ a:hover {
 footer {
   padding: 20px 40px;
   columns: 2;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    columns: 1;
+  }
 }
 
 footer p {
