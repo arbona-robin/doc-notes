@@ -11,13 +11,6 @@ body {
   min-height: 100vh;
 }
 
-@media screen and (max-width: 600px) {
-  header h1 {
-    line-height: 30px;
-    font-size: 35px;
-  }
-}
-
 a {
   color: #000000;
   text-decoration: underline;
@@ -45,6 +38,13 @@ header h1 {
   /* Translate 10 px to the left */
   transform: translateX(-10px);
   letter-spacing: -3px;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    line-height: 45px;
+    font-size: 50px;
+  }
 }
 
 header a {
