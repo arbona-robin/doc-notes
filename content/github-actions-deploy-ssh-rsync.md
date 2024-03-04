@@ -43,8 +43,7 @@ Create a new ssh key pair.
 ssh-keygen -t ed25519 -C "deploy-github-action-key-doc-notes"
 ```
 
-Add the private key to the repository secrets and key pass (passphrase if any). Add the host, port, user, and path.
-https://github.com/USER_NAME/REPO/settings/secrets/actions
+Add the private key to the github repository secrets and key pass (passphrase if any). Add the host, port, user, and path. /USER_NAME/REPO/settings/secrets/actions
 
 Add the public key to the server.
 
@@ -61,5 +60,4 @@ git commit -m "Add deploy action"
 git push
 ```
 
-Check deployment log at
-https://github.com/USER_NAME/REPO/actions
+Check deployment lot on github at USER_NAME/REPO/actions

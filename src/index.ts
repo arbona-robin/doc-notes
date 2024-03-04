@@ -118,7 +118,7 @@ function generateIndexPage({ template, pagesMetadata }: {
     console.log("Generating index page");
 
     const metadata = {
-        title: "Article list",
+        title: "Documentation, note, article ... list",
         description: "This is my blog",
         date: "",
         tags: []

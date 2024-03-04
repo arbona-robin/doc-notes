@@ -1,9 +1,9 @@
 document.getElementById("search").addEventListener("input", function () {
   const search = this.value.toLowerCase();
   document.querySelectorAll("a").forEach(function (a) {
-    const tags = a.getAttribute("search-data-tags");
-    const title = a.getAttribute("search-data-title");
-    const description = a.getAttribute("search-data-description");
+    const tags = a.getAttribute("data-tags");
+    const title = a.getAttribute("data-title");
+    const description = a.getAttribute("data-description");
 
     // Other links don't have tags
     if (!tags || !title || !description) {
